@@ -8,14 +8,14 @@ import math
 
 # First example
 
-# def square_root(a):
-#     if a < 0:
-#         raise ValueError("a is negative")
-#     else:
-#         return math.sqrt(a)
+def square_root(a):
+    if a < 0:
+        raise ValueError("a is negative")
+    else:
+        return math.sqrt(a)
 
-# def hypotenuse(a,b):
-#     return math.hypot(a,b)
+def hypotenuse(a,b):
+    return math.hypot(a,b)
 
 def add(a, b): 
     return a+b
