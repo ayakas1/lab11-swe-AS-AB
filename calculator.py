@@ -18,7 +18,6 @@ def square_root(a):
 def hypotenuse(a,b):
     return math.hypot(a,b)
 
-import math
 def add(a,b):
     c = a+ b
     return c
@@ -50,3 +49,16 @@ def exp(a,b):
     c = pow(a,b)
     return c
 
+def logarithm(a,b):
+    try:
+        if a <= 0:
+            raise ValueError("Error")
+        else:
+            c= math.log(b,a)
+            return c
+    except ValueError as error:
+        print("Caught ValueError:", str(error))
+
+def subtract(a,b):
+    c = a - b
+    return c
