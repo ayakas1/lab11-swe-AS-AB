@@ -11,11 +11,18 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 1
-    # def test_multiply(self): # 3 assertions
-    #     fill in code
+    def test_multiply(self): # 3 assertions
+        self.assertEqual(12, mul(4,3))
+        self.assertEqual(10, mul(2,5))
+        self.assertEqual(-30, mul(-15,2))
 
-    # def test_divide(self): # 3 assertions
-    #     fill in code
+
+
+    def test_divide(self): # 3 assertions
+        self.assertEqual(12, mul(4,60))
+        with self.assertRaises(ZeroDivisionError):
+            (mul(0,3))
+        self.assertEqual(-4, mul(-2,8))
     # ##########################
 
     ######## Partner 2
@@ -34,21 +41,22 @@ class TestCalculator(unittest.TestCase):
     # ##########################
     
     ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
-    #     # call log function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     logarithm(0, 5)
-    #     fill in code
+    def test_log_invalid_argument(self): # 1 assertion
+        #call log function inside, example:
+        with self.assertRaises(ValueError):
+            log(0, 5)
 
-    # def test_hypotenuse(self): # 3 assertions
-    #     fill in code
+    def test_hypotenuse(self): # 3 assertions
+        self.assertEqual(5, hypotenuse(3,4))
+        self.assertEqual(5, hypotenuse(-3,4))
+        self.assertEqual(10, hypotenuse(8,-6))
 
-    # def test_sqrt(self): # 3 assertions
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
-    #     # Test basic function
-    #     fill in code
+    def test_sqrt(self): # 3 assertions
+        with self.assertRaises(ValueError):
+           square_root(-10)
+        self.assertEqual(2, square_root(4))
+        self.assertEqual(3, square_root(9))
+
     ##########################
 
 # Do not touch this
