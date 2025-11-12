@@ -1,3 +1,7 @@
+#https://github.com/ayakas1/lab11-swe-AS-AB
+# Partner 1: Ayaka Shiomitsu
+# Partner 2: Amelia Boobyer
+
 import unittest
 from calculator import *
 
@@ -23,9 +27,9 @@ class TestCalculator(unittest.TestCase):
 
 
     def test_divide(self): # 3 assertions
-        self.assertAlmostEqual(12, mul(4,60))
-        self.assertAlmostEqual(-4, mul(-2,8))
-        self.assertAlmostEqual(6, mul(-5,-30))
+        self.assertAlmostEqual(12, div(4,60))
+        self.assertAlmostEqual(-4, div(-2,8))
+        self.assertAlmostEqual(6, div(-5,-30))
     # ##########################
 
     ######## Partner 2
@@ -38,20 +42,20 @@ class TestCalculator(unittest.TestCase):
 
     def test_logarithm(self): # 3 assertions
         self.assertEqual(log(10,10), 1)
-        self.assertEqual(log(8,2), 3)
-        self.assertEqual(log(100,10), 10)
+        self.assertEqual(log(2,8), 3)
+        self.assertEqual(log(10,100), 10)
 
     def test_log_invalid_base(self): # 1 assertion
         # use same technique from test_divide_by_zero
         with self.assertRaises(ValueError):
-                log(10,-1)
+                log(0,10)
     # ##########################
     
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
         #call log function inside, example:
         with self.assertRaises(ValueError):
-            log(0, 5)
+            log(5, 0)
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(5, hypotenuse(3,4))

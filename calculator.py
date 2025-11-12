@@ -1,3 +1,9 @@
+#https://github.com/ayakas1/lab11-swe-AS-AB
+# Partner 1: Ayaka Shiomitsu
+# Partner 2: Amelia Boobyer
+
+
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
@@ -28,36 +34,29 @@ def mul(a,b):
     c= a*b
     return c
 def div(a,b):
-    try:
-       if a ==0:
+    if a ==0:
         raise ZeroDivisionError("Error")
-       else:
+    else:
         c = b/a
         return c
-    except ValueError as error:
-        print("Caught ValueError:",str(error))
 def log(a,b):
-    try:
         if a <= 0:
             raise ValueError("Error")
         else:
             c= math.log(b,a)
             return c
-    except ValueError as error:
-        print("Caught ValueError:", str(error))
+
 def exp(a,b):
     c = pow(a,b)
     return c
 
 def logarithm(a,b):
-    try:
-        if a <= 0:
-            raise ValueError("Error")
-        else:
-            c= math.log(b,a)
-            return c
-    except ValueError as error:
-        print("Caught ValueError:", str(error))
+    if a <= 0:
+        raise ValueError("Error")
+    else:
+        c= math.log(b,a)
+        return c
+
 
 def subtract(a,b):
     c = a - b
