@@ -7,6 +7,16 @@ One function per operation, in order.
 import math
 
 # First example
+
+def square_root(a):
+    if a < 0:
+        raise ValueError("a is negative")
+    else:
+        return math.sqrt(a)
+
+def hypotenuse(a,b):
+    return math.hypot(a,b)
+
 def add(a, b): 
     return a+b
 
@@ -17,16 +27,18 @@ def mul(a,b):
     return a*b
 
 def div(a,b):
-    try:
+    if a == 0:
+        raise ZeroDivisionError("a is 0")
+    else:
         return b/a
-    except ZeroDivisionError as error:
-        print("Caught zero division error: ", str(error))
 
 def log(a,b):
-    try:
+    if b <= 0:
+        raise ValueError("b is less than or equal to 0")
+    elif a <=0:
+        raise ValueError("a is less than or equal to 0")
+    else:
         return math.log(b, a)
-    except ValueError as error:
-        print("Caught value error: ", str(error))
 
 def exp(a,b):
     return a**b
